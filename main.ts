@@ -15,6 +15,50 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
+radio.onReceivedString(function (receivedString) {
+    listtt = [
+    [
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255)
+    ],
+    [
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255)
+    ],
+    [
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 225),
+    randint(0, 225),
+    randint(0, 225)
+    ],
+    [
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255)
+    ],
+    [
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255),
+    randint(0, 255)
+    ]
+    ]
+    for (let y = 0; y <= 4; y++) {
+        for (let x = 0; x <= 4; x++) {
+            led.plotBrightness(x, y, list[y][x])
+        }
+    }
+})
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     listtt = [
@@ -59,6 +103,7 @@ input.onButtonPressed(Button.B, function () {
             led.plotBrightness(x, y, list[y][x])
         }
     }
+    radio.sendString("嗯對")
 })
 let listtt: number[][] = []
 let listt: number[] = []
@@ -86,11 +131,11 @@ randint(0, 1),
 randint(0, 1)
 ],
 [
-randint(0, 255),
-randint(0, 255),
-randint(0, 255),
-randint(0, 255),
-randint(0, 255)
+randint(0, 1),
+randint(0, 1),
+randint(0, 1),
+randint(0, 1),
+randint(0, 1)
 ],
 [
 randint(0, 1),
